@@ -8,3 +8,6 @@ next-env.d.ts
 
 # Friend's reference project — not part of our deploy
 Portfolio-Website-main/
+
+# Local agent/editor settings (do not publish)
+.claude/
