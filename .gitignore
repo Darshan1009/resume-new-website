@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Friend's reference project — not part of our deploy
+Portfolio-Website-main/
