@@ -849,6 +849,45 @@ h1, h2, h3, h4, h5, h6 { font-family: "Geist", sans-serif; margin: 0; }
   }
   .landing-info h2 { align-items: flex-start; }
 }
+@media screen and (max-width: 1024px) {
+  .landing-section {
+    height: auto;
+    min-height: 100svh;
+    padding: 110px 0 32px;
+  }
+
+  .landing-container {
+    width: var(--cWidth);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .landing-intro,
+  .landing-info,
+  .landing-meta {
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    top: auto;
+  }
+
+  .landing-info {
+    text-align: left;
+  }
+
+  .landing-info h2 {
+    align-items: flex-start;
+  }
+
+  .landing-meta {
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .landing-intro { right: 70%; }
   .landing-info { left: 70%; }
@@ -1139,13 +1178,33 @@ h1, h2, h3, h4, h5, h6 { font-family: "Geist", sans-serif; margin: 0; }
 @media (max-width: 1024px) {
   .whatIDO { height: auto; padding: 50px 0; flex-direction: column; }
   .what-box { width: 100%; }
-  .what-box-in { height: 500px; margin-left: 0; }
+  .what-box-in { height: auto; margin-left: 0; }
   .what-content { padding: 50px; width: 500px; max-width: 100%; }
 }
 @media (max-width: 900px) {
   .what-box .what-headline-h2 { margin: 50px 0; font-size: 55px; line-height: 53px; }
   .what-box:first-child { justify-content: left; }
-  .what-content { width: 100%; padding: 30px; }
+  .what-box-in { gap: 12px; }
+  .what-content {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 26px;
+  }
+  .what-noTouch:hover,
+  .what-content-active,
+  .what-noTouch:hover ~ .what-content,
+  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content.what-sibling {
+    min-height: 0;
+    padding: 26px;
+  }
+  .what-content-in {
+    opacity: 1;
+    animation: none;
+    overflow: visible;
+  }
+  .what-arrow { display: none; }
   .what-content h3 { font-size: 25px; }
 }
 
