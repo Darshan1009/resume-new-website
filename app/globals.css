@@ -876,10 +876,16 @@ h1, h2, h3, h4, h5, h6 { font-family: "Geist", sans-serif; margin: 0; }
 
   .landing-info {
     text-align: left;
+    margin-top: 10px;
   }
 
   .landing-info h2 {
     align-items: flex-start;
+  }
+
+  .landing-intro h1 {
+    margin-top: 6px;
+    margin-bottom: 14px;
   }
 
   .landing-meta {

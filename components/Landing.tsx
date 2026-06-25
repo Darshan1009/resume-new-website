@@ -13,13 +13,12 @@ const Landing = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const hasDesktopWidth = window.innerWidth >= 1024;
-    const hasEnoughCpu = (navigator.hardwareConcurrency || 4) >= 4;
+    const hasDesktopWidth = window.innerWidth >= 992;
     const hasEnoughMemory =
       (navigator as Navigator & { deviceMemory?: number }).deviceMemory === undefined ||
-      ((navigator as Navigator & { deviceMemory?: number }).deviceMemory as number) >= 4;
+      ((navigator as Navigator & { deviceMemory?: number }).deviceMemory as number) >= 3;
 
-    setShowChar(hasDesktopWidth && !reducedMotion && hasEnoughCpu && hasEnoughMemory);
+    setShowChar(hasDesktopWidth && !reducedMotion && hasEnoughMemory);
   }, []);
 
   return (
